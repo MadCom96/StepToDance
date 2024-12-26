@@ -34,7 +34,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: ${DANCE_MONGODB_PASSWORD}
       DEV_TRIP_MONGODB_BINDING_PORT: ${DANCE_MONGODB_BINDING_PORT}
-    restart: no
+    restart: unless-stopped
 
   spring:
     container_name: spring
